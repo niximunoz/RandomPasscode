@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div>
+        <h1 class="display-4">Random passcode #@Context.Session.GetInt32("CountSession")</h1>
+        <input class="valorToken" type="text" value="@Context.Session.GetString("Token")">
+    </div>
+    <a asp-controller="Home" asp-action="Generate"><button class="btn btn-primary">Generate</button></a>
+    
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
